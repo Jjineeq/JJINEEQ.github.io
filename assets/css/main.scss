@@ -16,3 +16,20 @@ $sidebar-order: 2;
 
 @import "skins/{{ site.theme_skin | default: 'blue' }}"; // skin
 @import "default"; // main partials
+
+.reward-section .item {
+    display: block; /* 블록 레벨 요소로 변경 */
+    margin-bottom: 10px; /* 아이템 간의 간격을 조정 */
+}
+
+.reward-section .project-title {
+    margin-bottom: 10; /* 타이틀 아래의 마진을 0으로 설정 */
+}
+
+.reward-section .project-tagline {
+    margin-top: 3; /* 태그라인 위의 마진을 0으로 설정 */
+}
+
+.separator {
+    visibility: hidden; /* '-' 문자 숨기기 */
+}
