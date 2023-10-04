@@ -1,3 +1,49 @@
+<!--
+
+{% assign projects = site.data.data.projects %}
+{% if projects %}
+<section class="section projects-section">
+
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ projects.title }}
+  </h2>
+
+  {% if projects.intro %}
+  <div class="intro">
+      <p>{{ projects.intro }}</p>
+  </div>
+  {% endif %}
+
+  {% for project in projects.assignments %}
+    <div class="item">
+
+      <div class="project-info">
+        <span class="project-title">
+          {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+          {% else %}
+          {{ project.title }}
+          {% endif %}
+        </span>
+
+        {% if project.tagline %}
+        <span class="project-tagline">{{ project.tagline }}</span>
+        {% endif %}
+      </div>
+
+    </div>
+  {% endfor %}
+
+</section>
+{% endif %}
+
+-->
+
+
 {% assign projects = site.data.data.projects %}
 {% if projects %}
 <section class="section projects-section">
@@ -16,9 +62,32 @@
   </div><!--//intro-->
   {% endif %}
 
-  {% for project in projects.assignments %}
+  <h3 class="subsection-title">Lab Project</h3> <!-- 하위 섹션 타이틀 -->
+  {% for project in projects.labProjects %} <!-- 국가 프로젝트 리스트 -->
     <div class="item">
 
+      <div class="project-info">
+        <span class="project-title">
+          {% if project.link %}
+          <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+          {% else %}
+          {{ project.title }}
+          {% endif %}
+        </span>
+
+        {% if project.tagline %}
+        <span class="project-tagline">{{ project.tagline }}</span>
+        {% endif %}
+      </div>
+
+    </div><!--//item-->
+  {% endfor %}
+
+  <h3 class="subsection-title">Contests and Competitions</h3> <!-- 하위 섹션 타이틀 -->
+  {% for project in projects.ContestsProjects %} <!-- 기업 프로젝트 리스트 -->
+  <div class="item">
+
+    <div class="project-info">
       <span class="project-title">
         {% if project.link %}
         <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
@@ -28,10 +97,28 @@
       </span>
 
       {% if project.tagline %}
-      - <span class="project-tagline">{{ project.tagline }}</span>
+      <span class="project-tagline">{{ project.tagline }}</span>
       {% endif %}
+    </div>
+  {% endfor %}
 
-    </div><!--//item-->
+  <h3 class="subsection-title">Personal Project</h3> <!-- 하위 섹션 타이틀 -->
+  {% for project in projects.personalProjects %} <!-- 개인 프로젝트 리스트 -->
+  <div class="item">
+
+    <div class="project-info">
+      <span class="project-title">
+        {% if project.link %}
+        <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        {% else %}
+        {{ project.title }}
+        {% endif %}
+      </span>
+
+      {% if project.tagline %}
+      <span class="project-tagline">{{ project.tagline }}</span>
+      {% endif %}
+    </div>
   {% endfor %}
 
 </section><!--//section-->

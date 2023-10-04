@@ -17,11 +17,3 @@ $sidebar-order: 2;
 @import "skins/{{ site.theme_skin | default: 'blue' }}"; // skin
 @import "default"; // main partials
 
-.reward-section .item {
-    display: block; /* 블록 레벨 요소로 변경 */
-    margin-bottom: 10px; /* 아이템 간의 간격을 조정 */
-}
-
-.separator {
-    visibility: hidden; /* '-' 문자 숨기기 */
-}

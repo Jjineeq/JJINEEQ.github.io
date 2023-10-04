@@ -53,10 +53,10 @@ p {
   }
   .profile-container {
     padding: 30px;
-    //background: darken($theme-color, 10%);
+    // background: darken($theme-color, 10%);
     background: rgba(0, 0, 0, 0.2);
     text-align: center;
-    color: #fff;
+    color: whitesmoke;
   }
   .name {
     font-size: 32px;
@@ -159,6 +159,8 @@ p {
   }
 }
 
+
+
 .main-wrapper {
   grid-column: span 7;
   order: $resume-order;
@@ -168,7 +170,8 @@ p {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 500;
-    color: darken($theme-color, 15%);
+    // color: darken($theme-color, 15%);
+    color: black; // sub title color
     position: relative;
     margin-top: 0;
     margin-bottom: 20px;
@@ -227,9 +230,33 @@ p {
       margin-bottom: 30px;
     }
     .item {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
   }
+
+  .separator {
+    visibility: hidden; /* '-' 문자 숨기기 */
+  }
+  
+  .project-tagline{
+    display:block;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .reward-section .item {
+  display: block; 
+  margin-bottom: 10px; 
+  }
+  
+
+  .subsection-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
 
   .publication-title {
     font-size: 16px;
@@ -264,11 +291,11 @@ p {
   }
   .level-bar {
     height: 12px;
-    background: $smoky-white;
+    background: black;
   }
   .level-bar-inner {
     height: 12px;
-    background: lighten($theme-color, 15%);
+    background: orange;
   }
 }
 
